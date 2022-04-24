@@ -15,24 +15,29 @@ ___
 __Overview:__ A simple Java Web project that allows schools and course developers to offer students a calculator that details the approximate amount of time left in a course from anywhere the student is presently at in the course.
 
 __Step 1:__ There are two inputs. The student selects their course from a pulldown menu.
+
+__Screenshot__
 ![Data Panda](https://drive.google.com/uc?export=view&id=1aieOVlZRd9n7QSsItLWeMMblas5FqRm6)
 
 __Step 2:__ Student inputs (as instructed) the last assginment number that was completed.
+
+__Screenshot__
 ![Data Panda](https://drive.google.com/uc?export=view&id=1hh1Pq2VyfsncbQAmTAYUpV6bGUyP7uXO)
 
 __Results:__ The student is taken to a page that displays the following results
-*[x] Page heading/title including name of course
-*[x] A warning of how to interpret the results
-*[x] The last assignment completed
-*[x] The next assignment coming up
-*[x] Total time left in the course in minutes
-*[x] Total time left in the course in hours
-*[x] Approx time left in the course working 1hr/day - 5days/wk
-*[x] Approx time left in the course working 2hrs/day - 5days/wk
-*[x] Approx time left in the course working 1hr/day - 7days/wk
-*[x] Approx time left in the course working 2hr/day - 7days/wk
-*[x] Ability to go "BACK" to the inputs/home page
+1. Page heading/title including name of course
+2. A warning of how to interpret the results
+3. The last assignment completed
+4. The next assignment coming up
+5. Total time left in the course in minutes
+6. Total time left in the course in hours
+7. Approx time left in the course working 1hr/day - 5days/wk
+8. Approx time left in the course working 2hrs/day - 5days/wk
+9. Approx time left in the course working 1hr/day - 7days/wk
+10. Approx time left in the course working 2hr/day - 7days/wk
+11. Ability to go "BACK" to the inputs/home page
 
+__Screenshot__
 ![Data Panda](https://drive.google.com/uc?export=view&id=1RGMU5s4iYV2jN1B6dXrkxy1ft8xoATG3)
 
 Note: Estimated time left in the course is calculated based on recommended time amounts already established and published in the curriculum at the beginning of each new section.
