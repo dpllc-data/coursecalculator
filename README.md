@@ -2,9 +2,9 @@
 # Course Progression (Time Left) Calculator
 ___
 ## URL: (none currently)
-##Author: Stan Shelton (Manager, Data Panda LLC)
-##Email: support@datapandemonium.com
-###Data Panda LLC is a database and database services company
+## Author: Stan Shelton (Manager, Data Panda LLC)
+## Email: support@datapandemonium.com
+### Data Panda LLC is a database and database services company
 ___
 __Terms of Use:__  Internal Use Only. All access to and use of the Product and Web Site shall be solely for the End User’s own internal business operations (Florida Virtual School, Flexpoint Education Cloud, and Data Panda LLC) and not for the benefit or business of any other party.
 
