@@ -16,13 +16,13 @@ __Overview:__ A simple Java Web project that allows schools and course developer
 
 __Step 1:__ There are two inputs. The student selects their course from a pulldown menu.
 
-__Screenshot__
+__Step1 Screenshot__
 
 ![Data Panda](https://drive.google.com/uc?export=view&id=1aieOVlZRd9n7QSsItLWeMMblas5FqRm6)
 
 __Step 2:__ Student inputs (as instructed) the last assginment number that was completed.
 
-__Screenshot__
+__Step 2 Screenshot__
 
 ![Data Panda](https://drive.google.com/uc?export=view&id=1hh1Pq2VyfsncbQAmTAYUpV6bGUyP7uXO)
 
@@ -39,7 +39,7 @@ __Results:__ The student is taken to a page that displays the following results
 10. Approx time left in the course working 2hr/day - 7days/wk
 11. Ability to go "BACK" to the inputs/home page
 
-__Screenshot__
+__Results Screenshot__
 
 ![Data Panda](https://drive.google.com/uc?export=view&id=1RGMU5s4iYV2jN1B6dXrkxy1ft8xoATG3)
 
