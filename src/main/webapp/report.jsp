@@ -19,8 +19,9 @@
 
 <div class="adjust-line-height">
     <h4>We all work at different speeds, so use this as a relative tool, not an absolute statement of time left
-               in the course. Make adjustments to these numbers if you see yourself working faster or slower than what
-               is estimated. This calculator leaves out any collaboration assessments as they are optional.</h4>
+        in the course.</h4>
+    <h4>Make adjustments to these numbers if you see yourself working faster or slower than what is estimated.
+        This calculator leaves out any collaboration assessments as they are optional.</h4>
 
     <br>
 

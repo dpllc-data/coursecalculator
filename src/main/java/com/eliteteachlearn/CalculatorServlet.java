@@ -8,6 +8,7 @@ import javax.servlet.annotation.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 // Servlet class handles user input, aggregation of data, and posting of desired data
@@ -55,6 +56,7 @@ public class CalculatorServlet extends HttpServlet {
             fileName = new File(getServletContext().getRealPath("FOPSem2.txt"));
 
         // scanner in find the length of the text file holding the corresponding data
+        assert fileName != null;
         Scanner inFile = new Scanner(fileName);
 
         int totAssessments = 0;
@@ -108,100 +110,75 @@ public class CalculatorServlet extends HttpServlet {
         }
         inFile.close();
 
+        System.out.println(Arrays.toString(sectMin));
+        System.out.println(Arrays.toString(totHoursDeci));
+        System.out.println(Arrays.toString(totHrsTrunc));
+        System.out.println(Arrays.toString(totMinLftOvr));
+        System.out.println(Arrays.toString(partHrsToDay));
+
         // Create and load up separate data structure containing only pertinent results
-        ArrayList<String> results = new ArrayList<String>();
+        ArrayList<String> results = new ArrayList<>();
+        boolean match = false;
         for (int n = 0; n < totAssessments; n++){
             //System.out.println(assessName[n].substring(0,5));
             if (lastSect.equals(assessName[n].substring(0, 5))) {
 
                 // build BOTH request object && ArrayList structure for flexibility
-                results.add(new String("Your last completed the " + assessName[n] + " assessment."));
+                match = true;
+                //results.add(new String("Your last completed the " + assessName[n] + " assessment."));
                 request.setAttribute("line1", "Your last completed the " + assessName[n] + " assessment.");
-                results.add(new String("Your next assessment is the " + assessName[n + 1] + " assessment."));
+                //results.add(new String("Your next assessment is the " + assessName[n + 1] + " assessment."));
                 request.setAttribute("line2", "Your next assessment is the " + assessName[n + 1] + " assessment.");
 
-                results.add(new String("TOTAL TIME: Your time left in the course is approximately " + totMin[n] + " minutes."));
+                //results.add(new String("TOTAL TIME: Your time left in the course is approximately " + totMin[n] + " minutes."));
                 request.setAttribute("line3", "TOTAL TIME: Your time left in the course is approximately " + totMin[n] + " minutes.");
-                results.add(new String("TOTAL TIME: Your time left in the course is approximately " + totHours[n] + " hours."));
+                //results.add(new String("TOTAL TIME: Your time left in the course is approximately " + totHours[n] + " hours."));
                 request.setAttribute("line4", "TOTAL TIME: Your time left in the course is approximately " + totHours[n] + " hours.");
 
-                results.add(new String("If you are willing to put in an 1hr/day, 5 days/wk!"));
+                //results.add(new String("If you are willing to put in a 1hr/day, 5 days/wk!"));
                 request.setAttribute("line5", "If you are willing to put in an 1hr/day, 5 days/wk!");
-                results.add(new String("Your time left in the course is approximately " + noDays1HrDayWkDays[n] + " days working 1hr/day - 5days/wk."));
+                //results.add(new String("Your time left in the course is approximately " + noDays1HrDayWkDays[n] + " days working 1hr/day - 5days/wk."));
                 request.setAttribute("line6", "Your time left in the course is approximately " + noDays1HrDayWkDays[n] + " days working 1hr/day - 5days/wk.");
-                results.add(new String("Your time left in the course is approximately " + noWeeksWkdys[n] + " weeks working 1hr/day - 5days/wk."));
+                //results.add(new String("Your time left in the course is approximately " + noWeeksWkdys[n] + " weeks working 1hr/day - 5days/wk."));
                 request.setAttribute("line7", "Your time left in the course is approximately " + noWeeksWkdys[n] + " weeks working 1hr/day - 5days/wk.");
 
-                results.add(new String("If you are willing to put in an 2hrs/day, 5 days/wk!"));
+                //results.add(new String("If you are willing to put in a 2hrs/day, 5 days/wk!"));
                 request.setAttribute("line8", "If you are willing to put in an 2hrs/day, 5 days/wk!");
-                results.add(new String("Your time left in the course is approximately " + noDays2HrDayWkDays[n] + " days working 2hrs/day - 5days/wk."));
+                //results.add(new String("Your time left in the course is approximately " + noDays2HrDayWkDays[n] + " days working 2hrs/day - 5days/wk."));
                 request.setAttribute("line9", "Your time left in the course is approximately " + noDays2HrDayWkDays[n] + " days working 2hrs/day - 5days/wk.");
-                results.add(new String("Your time left in the course is approximately " + noWks2HrsWkdys[n] + " weeks working 1hr/day - 5days/wk."));
+                //results.add(new String("Your time left in the course is approximately " + noWks2HrsWkdys[n] + " weeks working 1hr/day - 5days/wk."));
                 request.setAttribute("line10", "Your time left in the course is approximately " + noWks2HrsWkdys[n] + " weeks working 2hr/day - 5days/wk.");
 
-                results.add(new String("If you are willing to put in an 1hr/day, 7 days/wk!"));
+                //results.add(new String("If you are willing to put in a 1hr/day, 7 days/wk!"));
                 request.setAttribute("line11", "If you are willing to put in an 1hr/day, 7 days/wk!");
-                results.add(new String("Your time left in the course is approximately " + noDays1Hr[n] + " days working 1hr/day - 7days/wk."));
+                //results.add(new String("Your time left in the course is approximately " + noDays1Hr[n] + " days working 1hr/day - 7days/wk."));
                 request.setAttribute("line12", "Your time left in the course is approximately " + noDays1Hr[n] + " days working 1hr/day - 7days/wk.");
-                results.add(new String("Your time left in the course is approximately " + noWeeksDaily[n] + " weeks working 1hr/day - 7days/wk."));
+                //results.add(new String("Your time left in the course is approximately " + noWeeksDaily[n] + " weeks working 1hr/day - 7days/wk."));
                 request.setAttribute("line13", "Your time left in the course is approximately " + noWeeksDaily[n] + " weeks working 1hr/day - 7days/wk.");
 
-                results.add(new String("If you are willing to put in an 2hrs/day, 7 days/wk!"));
+                //results.add(new String("If you are willing to put in a 2hrs/day, 7 days/wk!"));
                 request.setAttribute("line14", "If you are willing to put in an 2hrs/day, 7 days/wk!");
-                results.add(new String("Your time left in the course is approximately " + noDays2Hr[n] + " days working 2hrs/day - 7days/wk."));
+                //results.add(new String("Your time left in the course is approximately " + noDays2Hr[n] + " days working 2hrs/day - 7days/wk."));
                 request.setAttribute("line15", "Your time left in the course is approximately " + noDays2Hr[n] + " days working 2hrs/day - 7days/wk.");
-                results.add(new String("Your time left in the course is approximately " + noWks2HrsDaily[n] + " weeks working 2hrs/day - 7days/wk."));
+                //results.add(new String("Your time left in the course is approximately " + noWks2HrsDaily[n] + " weeks working 2hrs/day - 7days/wk."));
                 request.setAttribute("line16", "Your time left in the course is approximately " + noWks2HrsDaily[n] + " weeks working 2hrs/day - 7days/wk.");
                 request.setAttribute("line17", "-------------------------------------------------------------");
 
             }
-    }
-            // catches improper requests made by user; forces restart of user prompt
-            if (results.isEmpty()) {
-                results.add(new String("You entered " + lastSect + ". Please go back. Check that you are have selected the correct course " +
-                        " AND the correct semester!"));
-                request.setAttribute("line1", "You entered " + lastSect + ". Please go back. Check that you are have selected the correct course " +
-                        " AND the correct semester.");
-            }
-
-/*
-            //String test = results.get(10);
-            response.getWriter().println("APCSA2 Time Left in Course Estimator");
-            response.getWriter().println();
-            response.getWriter().println("We all work at different speed, so use this as a relative tool, not an absolute " +
-                    "statement of time left in the course.");
-            response.getWriter().println("Make adjustments to these numbers if you see yourself working " +
-                    "faster or slower than what is estimated.");
-            response.getWriter().println();
- */
-/*
-            for (int i = 0; i < results.size(); i++) {
-                response.getWriter().println(results.get(i));
-                if (i == 1) {
-                    response.getWriter().println();
-                }
-                if (i == 3) {
-                    response.getWriter().println();
-                }
-                if (i == 6) {
-                    response.getWriter().println();
-                }
-                if (i == 9) {
-                    response.getWriter().println();
-                }
-                if (i == 12) {
-                    response.getWriter().println();
-                }
-                if (i == 15) {
-                    response.getWriter().println();
-                }
-            }
-*/
-        //forward data object to frontend
-        request.setAttribute("results", results);
-            getServletContext().getRequestDispatcher("/report").forward(request, response);
-            //response.sendRedirect("http://localhost:8080/HelloWorld/test");
-
         }
+        // catches improper requests made by user; forces restart of user prompt
+        if (!match) {
+            //results.add(new String("You entered " + lastSect + ". Please go back. Check that you have selected the correct course " + "AND the correct semester!"));
+            request.setAttribute("line1", "You have selected course/semester " +courseName+ " and entered assignment "
+                    + lastSect + ". Please go back. Check that you are have selected the correct course " +
+                    " AND the correct semester.");
+        }
+
+//forward data object to frontend
+        request.setAttribute("results", results);
+        getServletContext().getRequestDispatcher("/report").forward(request, response);
+        //response.sendRedirect("http://localhost:8080/HelloWorld/test");
+
     }
+}
 
