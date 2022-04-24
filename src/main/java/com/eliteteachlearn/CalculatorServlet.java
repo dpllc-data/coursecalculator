@@ -1,18 +1,5 @@
-/**
-* The purpose of this servlet class is to service HTTP requests from the
-* web client class. More specifically the class handles the backend tasks
-* associated with; obtaining user input for the last assignment completed,
-* loading time data needed to produce user results, creating a subset of
-* that data that is pertinent to the user, storing the resulting data and
-* passing that data on as an HTTP service request.
- *
- * author: Stan Shelton
- * version: 1.05
- * date: April 23, 2022
- */
-
-// IntelliJ create package
 package com.eliteteachlearn;
+
 
 // import statements
 import javax.servlet.*;
@@ -24,9 +11,20 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 // Servlet class handles user input, aggregation of data, and posting of desired data
+/**
+ * The purpose of this servlet class is to service HTTP requests from the
+ * web client class. More specifically the class handles the backend tasks
+ * associated with; obtaining user input for the last assignment completed,
+ * loading time data needed to produce user results, creating a subset of
+ * that data that is pertinent to the user, storing the resulting data and
+ * passing that data on as an HTTP service request.
+ *
+ * @author Stan Shelton
+ * @version 1.05
+ * date April 23, 2022
+ */
 @WebServlet("/calculate")
 public class CalculatorServlet extends HttpServlet {
-    @Override // Override service method allowing servlet to handle requests
     /**
      * The service method is handling the footwork (input, aggregation, storage and posting)
      * @param request creates object passed as argument
@@ -34,6 +32,7 @@ public class CalculatorServlet extends HttpServlet {
      * @throws IOException if an input or output error occurs while the servlet is handling the HTTP request
      * @throws ServletException if the HTTP request cannot be handled
      */
+    @Override // Override service method allowing servlet to handle requests
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         //input for last assignment completed and the corresponding course
@@ -66,7 +65,7 @@ public class CalculatorServlet extends HttpServlet {
         }
         inFile.close();
 
-        // Data structure declaration and initialization
+        // Data structure declarations and initializations
         String[] assessName = new String[totAssessments];
         int[] sectMin = new int[totAssessments];
         int[] totMin = new int[totAssessments];
@@ -198,7 +197,7 @@ public class CalculatorServlet extends HttpServlet {
                 }
             }
 */
-
+        //forward data object to frontend
         request.setAttribute("results", results);
             getServletContext().getRequestDispatcher("/report").forward(request, response);
             //response.sendRedirect("http://localhost:8080/HelloWorld/test");
