@@ -17,11 +17,13 @@ __Overview:__ A simple Java Web project that allows schools and course developer
 __Step 1:__ There are two inputs. The student selects their course from a pulldown menu.
 
 __Screenshot__
+
 ![Data Panda](https://drive.google.com/uc?export=view&id=1aieOVlZRd9n7QSsItLWeMMblas5FqRm6)
 
 __Step 2:__ Student inputs (as instructed) the last assginment number that was completed.
 
 __Screenshot__
+
 ![Data Panda](https://drive.google.com/uc?export=view&id=1hh1Pq2VyfsncbQAmTAYUpV6bGUyP7uXO)
 
 __Results:__ The student is taken to a page that displays the following results
@@ -38,6 +40,7 @@ __Results:__ The student is taken to a page that displays the following results
 11. Ability to go "BACK" to the inputs/home page
 
 __Screenshot__
+
 ![Data Panda](https://drive.google.com/uc?export=view&id=1RGMU5s4iYV2jN1B6dXrkxy1ft8xoATG3)
 
 Note: Estimated time left in the course is calculated based on recommended time amounts already established and published in the curriculum at the beginning of each new section.
