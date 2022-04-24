@@ -13,19 +13,19 @@ __© 2022 Data Panda LLC__
 ![Data Panda](https://drive.google.com/uc?export=view&id=1I5KWAh7O4AUzTqjkLQkdtfD8JVnBIMyh)
 ___
 __Overview:__ A simple Java Web project that allows schools and course developers to offer students a calculator that details the approximate amount of time left in a course from anywhere the student is presently at in the course.
-
+___
 __Step 1:__ There are two inputs. The student selects their course from a pulldown menu.
 
-__Step1 Screenshot__
+__Step 1 Screenshot__
 
 ![Data Panda](https://drive.google.com/uc?export=view&id=1aieOVlZRd9n7QSsItLWeMMblas5FqRm6)
-
+___
 __Step 2:__ Student inputs (as instructed) the last assginment number that was completed.
 
 __Step 2 Screenshot__
 
 ![Data Panda](https://drive.google.com/uc?export=view&id=1hh1Pq2VyfsncbQAmTAYUpV6bGUyP7uXO)
-
+___
 __Results:__ The student is taken to a page that displays the following results
 1. Page heading/title including name of course
 2. A warning of how to interpret the results
@@ -44,7 +44,7 @@ __Results Screenshot__
 ![Data Panda](https://drive.google.com/uc?export=view&id=1RGMU5s4iYV2jN1B6dXrkxy1ft8xoATG3)
 
 Note: Estimated time left in the course is calculated based on recommended time amounts already established and published in the curriculum at the beginning of each new section.
-
+___
 __Tools Used / Prerequisites__
 * IntelliJ 2021.2.2 (Ultimate)
 * IntelliJ Runtime v11.0.12+7-b1504.28 amd64
@@ -52,7 +52,7 @@ __Tools Used / Prerequisites__
 * Tomcat Server 9.0.56
 * Ubuntu Server 20.04
 * Hosted: Digital Ocean (when published to web)
-
+___
 __Dependencies__
 * JUnit Jupiter API
 * JUnit Jupiter Engine
@@ -63,24 +63,24 @@ __Dependencies__
 * Spring Web
 * javax.servlet.jstl
 * thymeleaf
-
+___
 __Backend Features__
 * Java Server Pages (JSP)
 * Java Servlet
 * csv files
 * ArrayList
 * JSON
-
+___
 __Frontend Features__
 * HTML
 * CSS
 * Javascript
 * JSON
-
+___
 __Security Features__
 * log4j compliant (patched)
 * No database protection to worry about
-
+___
 __Convenience Features__
 * Data time stats loaded from text (csv) file for each course
 * Pertinent course data read into Servlet object or optional arrayList
