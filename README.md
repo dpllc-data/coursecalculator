@@ -2,7 +2,7 @@
 # Course Progression (Time Left) Calculator
 ___
 ## URL: (none currently)
-## Author: Stan Shelton (Manager, Data Panda LLC)
+## Author: Stan Shelton
 ## Email: support@datapandemonium.com
 ### Data Panda LLC is a database and database services company
 ___
