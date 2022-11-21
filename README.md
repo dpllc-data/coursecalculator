@@ -1,7 +1,7 @@
 <!-- Headings -->
 # Course Progression (Time Left) Calculator
 ___
-## URL: (none currently)
+## URL: (tested on Digital Ocean, but not currently in production)
 ## Author: Stan Shelton
 ## Email: support@datapandemonium.com
 ### Data Panda LLC is a database and database services company
